@@ -1,4 +1,5 @@
 import React from 'react';
+import Inquiry from './Inquiry';
 
 const Welcome = () => {
     return (
@@ -12,7 +13,13 @@ const Welcome = () => {
             <div className='Shop__grid'>
             <div className='Shop__home'></div>
             <div className='Shop__info'>
-                <p>C&C Auto Repair is a reputable auto repair shop in Monterey, California, specializing in European makes and models like BMW, Mercedes-Benz, Audi, and Porsche. If you rent the property in front, you’ll have access to an outdoor lift, which can be used to work on cars or prep them for Laguna Seca Raceway events. With their experienced technicians, state-of-the-art equipment, and commitment to customer satisfaction, C&C Auto Repair is a top choice for high-quality auto repair and maintenance services in Monterey.</p>
+                <p>C&C Auto Repair is a reputable auto repair shop in Monterey, California, specializing in European
+                     makes and models like BMW, Mercedes-Benz, Audi, and Porsche. If you rent the property
+                      in front, you’ll have access to an outdoor lift, which can be used to work on cars
+                       or prep them for Laguna Seca Raceway events. With their experienced technicians,
+                        state-of-the-art equipment, and commitment to customer satisfaction,
+                         C&C Auto Repair is a top choice for high-quality auto repair and maintenance
+                          services in Monterey.</p>
             </div>
             </div>
         </div>
@@ -29,6 +36,9 @@ const Welcome = () => {
             </div>
             </div>
         </div>
+        </div>
+        <div className='Inquiry__home'>
+            <Inquiry />
         </div>
         </div>
     )
