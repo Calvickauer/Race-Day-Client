@@ -2,8 +2,41 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* background-color: red; */
+  background-image: url('./assets/images/corkk.jpeg');
+  background-size: contain;
+  font-weight: bolder;
+  text-align: center;
+  color: rgb(113, 6, 6);
+  margin: auto;
 }
 ​
 .logout-link {
   cursor: pointer;
+}
+
+.Home__page{
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.About__section{
+  width: 70%;
+  height: 600px;
+  background-color: aliceblue;
+  color: black;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-top: 10px;
+  overflow-y: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
 }

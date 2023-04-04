@@ -2,9 +2,8 @@ import React from 'react';
 
 const Welcome = () => {
     return (
-        <div>
-            <h1>MERN Authentication</h1>
-            <p>Welcome to my app.</p>
+        <div className='Home__page'>
+            <h1>WRS Garage / Home / Spa Rental</h1>
         </div>
     )
 }
