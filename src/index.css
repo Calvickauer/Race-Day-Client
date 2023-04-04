@@ -5,6 +5,7 @@ body {
   /* background-color: red; */
   background-image: url('./assets/images/corkk.jpeg');
   background-size: contain;
+  background-attachment: fixed;
   font-weight: bolder;
   color: rgb(113, 6, 6);
   margin: auto;
