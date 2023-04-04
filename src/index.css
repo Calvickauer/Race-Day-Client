@@ -61,12 +61,51 @@ h1 {
   border: 2px solid white;
 }
 
+.Spa__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Spa__info{
+  background-color: rgba(0, 0, 0, 0.688);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 250px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
 .Shop__container{
   background-color: rgb(255, 0, 0);
   width: fit-content;
   text-align: center;
   border-radius: 20px;
   border: 2px solid white;
+}
+
+.Shop__home{
+  background-image: url('./assets/images/Shop.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 450px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.Shop__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Shop__info{
+  background-color: rgba(0, 0, 0, 0.688);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 250px;
+  height: 450px;
+  overflow-y: scroll;
 }
 
 .Home__container{
@@ -81,4 +120,5 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 100px;
+  gap: 30px;
 }
