@@ -1,13 +1,10 @@
-// Imports
+// App.js
+
 import React, { useEffect, useState } from 'react';
 import { Route, Switch, Redirect, BrowserRouter as Router } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
-
-// CSS
 import './App.css';
-
-// Components
 import Signup from './components/Signup';
 import About from './components/About';
 import Footer from './components/Footer';
@@ -26,11 +23,10 @@ const PrivateRoute = ({ component: Component, ...rest}) => {
 }
 
 function App() {
-  // Set state values
   const [currentUser, setCurrentUser] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const [refreshNavbar, setRefreshNavbar] = useState(false);
 
- 
   useEffect(() => {
     let token;
 
@@ -53,17 +49,17 @@ function App() {
 
   const handleLogout = () => {
     if (localStorage.getItem('jwtToken')) {
-      // remove token for localStorage
       localStorage.removeItem('jwtToken');
       setCurrentUser(null);
       setIsAuthenticated(false);
+      setRefreshNavbar(!refreshNavbar);
     }
   }
 
   return (
     <Router>
     <div className="App">
-      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} refreshNavbar={refreshNavbar} />
       <div className="container mt-5">
         <Switch>
           <Route path='/signup' component={Signup} />
@@ -72,7 +68,7 @@ function App() {
             render={(props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>}
           />
           <PrivateRoute path="/profile" component={Profile} user={currentUser} handleLogout={handleLogout} />
-          <Route exact path="/" component={Welcome} />
+          <Route exact path="/" render={(props) => <Welcome {...props} refreshNavbar={refreshNavbar} />} />
           <Route path="/about" component={About} />
           <Route path="/inquiry" component={Inquiry} />
         </Switch>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Inquiry from './Inquiry';
 
-const Welcome = () => {
+const Welcome = ({refreshNavbar}) => {
     return (
         <div>
         <div className='Home__page'>
@@ -28,7 +28,7 @@ const Welcome = () => {
             <div className='Home__home'></div>
         </div>
         <div className='Spa__container'>
-            <h1>The Spa</h1>
+            <a href='/about'><h1>The Spa</h1></a>
             <div className='Spa__grid'>
             <div className='Spa__home'></div>
             <div className='Spa__info'>
@@ -38,7 +38,7 @@ const Welcome = () => {
         </div>
         </div>
         <div className='Inquiry__home'>
-            <Inquiry />
+            <Inquiry refreshNavbar={refreshNavbar} />
         </div>
         </div>
     )
